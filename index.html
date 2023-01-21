@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="script.js"></script>
+    <title>Encriptador</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="imagenes/Logo.png" alt="Logo de alura" >
+    </header>
+    <main>
+        <section>
+            <textarea class="tex-area" id="tex-area" cols="30" rows="10" placeholder="Ingrese el texto "></textarea>
+            <div>
+                <h6 class="informacion">Solo letras minúsculas y sin acentos</h6>
+            </div>
+            <div class="botones">
+                <button class="btn-encriptar" id="btnencriptar">Encriptar</button>
+                <button class="btn-desencriptar" id="btndesencriptar">Desencriptar</button>
+            </div>
+        </section>
+        <section>
+            <textarea class="mensaje" id="textodesencriptado" cols="20" rows="10"></textarea>
+            <div>
+                <button class="copiar" id="btncopiar">Copiar</button>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+    var btn = document.querySelector("#btnencriptar");
+    btn.onclick = encriptar;
+
+    var btn2 = document.querySelector("#btndesencriptar");
+    btn2.onclick = desencriptar;
+
+    var btn3 = document.querySelector("#btncopiar");
+    btn3.onclick=copiar;
+</script>
+</html>
